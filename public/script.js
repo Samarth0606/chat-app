@@ -18,6 +18,8 @@ $('#send-btn').on('click' ,()=>{
 socket.on('received-msg' , (data)=>{
     // console.log(data)
     $('#chat').append(`<li class="border p-2 ms-0 mb-2 rounded-pill"><span class="fw-bold"> ${data.username} </span>-> ${data.msg} <span></span> </li>`)
+    // automatically scroll to the top
+    $('#chat').scrollTop($('#chat').outerHeight());
 })
 
 
