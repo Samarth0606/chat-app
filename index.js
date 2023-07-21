@@ -17,7 +17,7 @@ const users = {};
 
 io.on('connection' , (socket)=>{
     // console.log(socket.id)
-    console.log(`connection established with ${socket.id}`);
+    // console.log(`connection established with ${socket.id}`);
 
     socket.on('send-msg' , (data)=>{ //listen to some event
         // console.log(data);

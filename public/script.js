@@ -7,9 +7,15 @@ $('#send-btn').on('click' ,()=>{
     // console.log('clicked')
     const msgText = $('#inp').val();
 
-    socket.emit('send-msg' , {
-        msg:msgText
-    })
+    if(!msgText){
+        return
+    }
+    else{
+
+        socket.emit('send-msg' , {
+            msg:msgText
+        })
+    }
 
     $('#inp').val("")
 });
